@@ -1,0 +1,12 @@
+.about{
+    width: 100%;
+    height: 469px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+
+    @media screen and (max-width:1068px){
+        height: auto;
+    }
+}

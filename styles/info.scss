@@ -1,0 +1,150 @@
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 53px 0 83px;
+    position: relative;
+
+    &__image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .icon{
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__title{
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: #353738;
+        padding: 25px 0;
+    }
+
+    &__text{
+        width: 75%;
+        color: #848789;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: left;
+        position: relative;
+        padding-bottom: 12px;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 50px;
+            border-bottom: 1px solid #353738;
+            bottom: -15px;
+            left: calc(50% - 25px);
+        }
+    }
+
+    &::after{
+        display: block;
+        content: "";
+        background-color: #fff;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        bottom: -5px;
+        left: calc(50% - 5px);
+        transform: rotate(45deg);
+        z-index: 1;
+    }
+    
+    &--about{
+        .info{
+            padding: 35px 0;
+
+            .icon{
+                margin: 9px 0 -6px;
+            }
+
+            &__title{
+                padding: 36px 0;
+                margin-left: 14px;
+                text-align: center;
+            }
+            
+            &__text{
+                width: 67.5%;
+                text-align: center;
+                text-indent: 10px;
+                font-size: 18px;
+                line-height: 34px;
+    
+                &::after{
+                    display: none;
+                }
+            }
+        }
+
+        &::after{
+            display: none;
+        }
+    }
+
+    &--twits{
+        padding: 67px 0;
+        .info{
+            &__title{
+                letter-spacing: 2px;
+            }
+
+            &__sub-title{
+                text-transform: lowercase;
+            }
+
+            &__time{
+                text-transform: lowercase;
+                font-weight: 300;
+                color: #848789;
+            }
+
+            &__text{
+                width: 70%;
+                font-size: 24px;
+                line-height: 34px;
+                font-style: italic;
+                text-align: center;
+
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        &::after{
+            display: none;
+        } 
+    }
+
+    &--retro{
+        padding: 62.5px 0;
+
+        .info{
+            &__image{
+                .icon{
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:769px){
+    .info{
+        &--about{
+            .info{
+                &__text{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

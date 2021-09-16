@@ -1,0 +1,29 @@
+@import "header";
+@import "navigation";
+@import "hamburger";
+@import "about";
+@import "work";
+@import "twits";
+@import "shop";
+@import "contact";
+@import "footer";
+@import "slick";
+@import "button";
+@import "info";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body{
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width:320px){
+      overflow-x: scroll;
+  }
+}
+
